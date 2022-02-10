@@ -23,6 +23,7 @@ public class shooter : MonoBehaviour {
 		if(Input.GetMouseButton(0) && (Time.time > timesincelastfire)) {
 			timesincelastfire = Time.time + fireRate;
 			GameObject bullet = Instantiate (bulletprefab,muzzle.position,Quaternion.identity);
+			bullet.transform.SetParent (muzzle.transform);
 	}
 }
 }
